@@ -1,0 +1,20 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block page_title %}Page with no title{% endblock %}</title>
+
+    {% block css %}
+    {% endblock %}
+
+    {% block js %}
+    {% endblock js %}
+</head>
+<body>
+    {% block content %}
+        <h1>This is a Heading</h1>
+        <p>This is a paragraph.</p>
+    {% endblock %}
+</body>
+</html>
+

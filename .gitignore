@@ -1,1 +1,107 @@
-venv/*
+*.DS_Store
+.AppleDouble
+.LSOverride
+.python-version
+.vscode/*
+# Javacript
+node_modules
+
+# visual-basic code
+.vscode/*
+
+# vim
+.vim/*
+
+# Django
+*.pyc
+staticfiles
+./venv/
+venv/
+.env
+*.rdb
+*.db
+*.py~
+*.py.swp
+*.swo
+*.swn
+*.swp
+/components
+celerybeat-schedule
+celerybeat.pid
+
+# Database
+db.sqlite3
+*.dump
+
+#Icon must end with two \r
+Icon
+
+Thumbnails
+._*
+
+#Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Cache
+*# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+
+# Sphinx documentation
+docs/_build/__pycache__*
