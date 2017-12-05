@@ -30,7 +30,7 @@ SECRET_KEY = 'd5j32v+pb+$)hj9@l4=rbvv$4s#=!l8)5o&(y67yg&rn9wei6+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['cas-jcs.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'cas-jcs.herokuapp.com', 'localhost']
 
 
 # Application definition
