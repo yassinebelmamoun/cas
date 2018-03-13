@@ -1,0 +1,9 @@
+{% extends 'base_administrateur.html' %}
+
+{% block content %}
+  <div class="main">
+    <h3>Administrateur créé</h3>
+    <p><strong>{{utilisateur.get_full_name|capfirst}}</strong> a été nommé administrateur du compte du courtier <strong>{{utilisateur.courtier|capfirst}}</strong>.</p>
+    <p>Un email a été envoyé à <strong>{{utilisateur.email}}</strong> contenant le mot de passe.</p>
+  </div>
+{% endblock %}

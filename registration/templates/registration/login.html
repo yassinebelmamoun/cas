@@ -1,0 +1,16 @@
+{% extends 'base_registration.html' %}
+
+{% load static %}
+
+{% block content %}
+    <div class="card card-login mx-auto mt-5">
+      <div class="card-header">Connexion à CAS Service</div>
+      <div class="card-body">
+		{% include 'form_template.html' with form=form button_name='Se connecter' %}
+        <div class="text-center">
+			<a class="d-block small" href="{% url 'password_reset' %}">Mot de passe oublié?</a>
+        </div>
+      </div>
+      </div>
+    </div>
+{% endblock %}

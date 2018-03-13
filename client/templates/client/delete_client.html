@@ -1,0 +1,11 @@
+{% extends 'client/base.html' %}
+
+{% block content %}
+<div class="main">
+    <form action="" method="post">{% csrf_token %}
+        <p>Êtes-vous sûr de vouloir supprimer le client <strong>{{ object }}</strong>?<br>
+        Tous les données liées à ce client seront supprimées.</p>
+        <input type="submit" value="Supprimer" class="btn btn-lg btn-danger text-center" />
+    </form>
+</div>
+{% endblock %}

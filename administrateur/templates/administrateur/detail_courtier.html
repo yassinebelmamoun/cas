@@ -1,0 +1,38 @@
+{% extends 'administrateur/base.html' %}
+
+{% block content %}
+<div class="main">
+  <div>
+    <div class="text-right"> 
+      <a href="{% url 'administrateur:courtier_update' courtier.pk %}" class="btn btn-warning btn-lg">Modifier</a>
+      <a href="{% url 'administrateur:courtier_delete' courtier.pk %}" class="btn btn-danger btn-lg">Supprimer</a>
+    </div>
+    <h3>{{ courtier.cabinet_name }}</h3>
+    <ul>
+      <li>Dirigeant: {{courtier.director_full_name|capfirst}}</li>
+      <li>Autres informations?</li>
+    </ul>
+  </div>
+  <div>
+    <table class="table table-ordered">
+      <thead><tr><th>Nom</th><th>Role</th><th>Action</th></tr></thead>
+      <tbody>
+        {% for utilisateur in courtier.get_team %}
+          <tr>
+            <td>{{ utilisateur.get_full_name | capfirst }}</td>
+            <td>{{ utilisateur.role }}</td>
+            <td>
+              <a href="{% url 'administrateur:courtier_administrateur_delete' utilisateur.pk %}" class="btn btn-danger">
+                Supprimer
+              </a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>  
+    <a href="{% url 'administrateur:courtier_create_administrateur' courtier.pk %}" class="btn btn-success btn-lg">
+      Créer un nouvel administrateur
+    </a>
+  </div>
+</div>
+{% endblock %}

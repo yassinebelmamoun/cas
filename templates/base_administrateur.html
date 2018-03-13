@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>{% block page_title %}CAS Administration{% endblock %}</title>
+  <!-- Bootstrap core CSS-->
+  <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'css/administrateur.css' %}" rel="stylesheet">
+  <!-- Custom fonts for this template-->
+  <link href="{% static 'font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+  <!-- Page level plugin CSS-->
+  <link href="{% static 'datatables/dataTables.bootstrap4.css' %}" rel="stylesheet">
+</head>
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">CAS Administration</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+{# Accueil #}
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Accueil</a>
+      </li>
+{# Courtier #} 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Courtier 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'administrateur:courtier_create' %}">Créer un courtier</a>
+          <a class="dropdown-item" href="{% url 'administrateur:courtier_list' %}">Liste de courtiers</a>
+        </div>
+      </li>
+{# Contrats #} 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Contrats 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Créer un contrat</a>
+          <a class="dropdown-item" href="#">Liste des contrats</a>
+        </div>
+      </li>
+{# Clients #} 
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Clients 
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Liste des clients</a>
+          <a class="dropdown-item" href="#">Liste des contrats émis</a>
+        </div>
+      </li>
+    </ul>
+	<span class="navbar-text">
+      <a href="{% url 'logout' %}">Se déconnecter</a> 
+    </span>
+  </div>
+</nav>
+<div class="row">
+    <div class="container">
+    {% block content %}
+    {% endblock %}
+    </div>
+</div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'jquery-easing/jquery.easing.min.js' %}"></script>
+    <!-- Page level plugin JavaScript-->
+    <script src="{% static 'chart.js/Chart.min.js' %}"></script>
+    <script src="{% static 'datatables/jquery.dataTables.js' %}"></script>
+    <script src="{% static 'datatables/dataTables.bootstrap4.js' %}"></script>
+</body>
+</html>

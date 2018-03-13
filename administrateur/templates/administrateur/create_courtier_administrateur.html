@@ -1,0 +1,9 @@
+{% extends 'administrateur/base.html' %}
+
+{% block content %}
+    <div class="main">
+	  <h3>Création d'un compte administrateur pour ce courtier</h3>
+      <p>Un e-mail sera envoyé à l'addresse lui fournissant un mot de passe permettant l'accès et la gestion du compte de ce courtier</p>
+	  {% include 'form_template.html' with form=form button_name='Créer' %}
+    </div>
+{% endblock %}

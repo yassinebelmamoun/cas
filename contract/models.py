@@ -1,6 +1,6 @@
 """ Contrat Model """
 from django.db import models
-from client.models import Client
+from client.models import Client 
 from courtier.models import Courtier
 
 

@@ -1,0 +1,23 @@
+{% load addcss %}
+<form method="post">
+  {% csrf_token %}
+  <div class="form-template">
+	{% for field in form %}
+		<div class="form-group">
+		  <label class="control-label">
+			{{ field.label }}{% if field.field.required %}<span style="color:red;"> *</span>{% endif %}
+		  </label>
+		  <div class="{% if field.errors %}has-error{% endif %}">
+			{{ field | addcss:"form-control" }}
+			<span class="help-block m-b-none text-danger small">{{ field.errors }}</span>
+		  </div>
+		</div>
+	{% endfor %}
+  </div> 
+  <div class="text-center">
+    <button type="submit" class="btn btn-lg btn-success center-block">
+      {%if button_name%}{{button_name}}{%else%}Envoyer{%endif%}
+    </button>
+  </div>
+</form>
+
